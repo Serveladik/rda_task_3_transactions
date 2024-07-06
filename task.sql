@@ -56,11 +56,12 @@ SET @OrderID = LAST_INSERT_ID();
 INSERT INTO OrderItems (OrderID, ProductID, Count) 
 VALUES (@OrderID, 1, @Quantity);
 
+
+COMMIT;
+
 UPDATE Products 
 SET WarehouseAmount = WarehouseAmount - @Quantity 
 WHERE ID = 1;
-
-COMMIT;
 
 SELECT * FROM Orders;
 SELECT * FROM OrderItems;
