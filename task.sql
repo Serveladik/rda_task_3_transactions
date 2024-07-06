@@ -39,17 +39,17 @@ CREATE TABLE OrderItems (
 );
 
 INSERT INTO Products (Name, Description, Price, WarehouseAmount)
-    VALUES ("AwersomeProduct", "Product Description", 5, 42);
+    VALUES ('AwersomeProduct', 'Product Description', 5, 42);
 
 INSERT INTO Customers (FirstName, LastName, Email, Address)
-    VALUES ("John", "Dou", "j@dou.ua", "far, far away");
+    VALUES ('John', 'Dou', 'j@dou.ua', 'far, far away');
 
 START TRANSACTION;
 
 SET @Quantity = 1;
 
 INSERT INTO Orders (CustomerID, Date) 
-VALUES (1, "2023-01-01");
+VALUES (1, '2023-01-01');
 
 SET @OrderID = LAST_INSERT_ID();
 
