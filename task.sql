@@ -23,7 +23,3 @@ SET WarehouseAmount = WarehouseAmount - @Quantity
 WHERE ID = 1;
 
 COMMIT;
-
-SELECT * FROM Orders;
-SELECT * FROM OrderItems;
-SELECT * FROM Products;
